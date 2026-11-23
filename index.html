@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7ff">
+  <title>Округлення десяткових дробів — тренажер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">✦</div>
+    <div><p class="eyebrow">Математика · 5 клас</p><h1>Округлення десяткових дробів</h1></div>
+    <div class="top-stats" aria-live="polite">
+      <div><span id="solvedCount">0</span><small>розв'язано</small></div>
+      <div><span id="streakCount">0</span><small>серія поспіль</small></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro panel">
+      <div>
+        <span class="pill">Навчайся крок за кроком</span>
+        <h2>Округлюй упевнено!</h2>
+        <p>Знайди потрібний розряд, подивись на цифру праворуч і вибери правильну відповідь.</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <svg viewBox="0 0 220 130" role="img">
+          <rect x="10" y="18" width="200" height="94" rx="18" fill="#e8efff"/>
+          <path d="M35 77h150" stroke="#9db2e8" stroke-width="3" stroke-linecap="round"/>
+          <g fill="#fff" stroke="#a9b9e7" stroke-width="2">
+            <rect x="30" y="43" width="31" height="40" rx="8"/><rect x="68" y="43" width="31" height="40" rx="8"/>
+            <rect x="106" y="43" width="31" height="40" rx="8"/><rect x="144" y="43" width="31" height="40" rx="8"/>
+          </g>
+          <g fill="#344b82" font-size="21" font-weight="700" text-anchor="middle">
+            <text x="45" y="70">4</text><text x="83" y="70">,</text><text x="121" y="70">7</text><text x="159" y="70">2</text>
+          </g>
+          <path d="M139 30v65" stroke="#f08b54" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="139" cy="28" r="6" fill="#f08b54"/>
+          <path d="M174 25l8-8 8 8" fill="none" stroke="#f08b54" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="lesson-grid" aria-label="Пояснення правила">
+      <article class="panel lesson-card">
+        <div class="section-heading"><span class="number">1</span><h3>Розрядна таблиця</h3></div>
+        <p class="muted">Кожна цифра має своє місце.</p>
+        <svg class="wide-svg" viewBox="0 0 600 160" role="img" aria-label="Розрядна таблиця: ціла частина, десяті, соті, тисячні, десятитисячні">
+          <rect x="8" y="12" width="584" height="136" rx="13" fill="#f7f9ff" stroke="#dce4f6"/>
+          <g font-size="12" fill="#52617f" text-anchor="middle" font-weight="600">
+            <text x="50" y="39">Сотні</text><text x="132" y="39">Десятки</text><text x="214" y="39">Одиниці</text>
+            <text x="296" y="39">Десяті</text><text x="378" y="39">Соті</text><text x="460" y="39">Тисячні</text><text x="542" y="39">Десятитисячні</text>
+          </g>
+          <g stroke="#dce4f6" fill="#fff">
+            <rect x="10" y="51" width="80" height="70" rx="8"/><rect x="92" y="51" width="80" height="70" rx="8"/>
+            <rect x="174" y="51" width="80" height="70" rx="8"/><rect x="256" y="51" width="80" height="70" rx="8"/>
+            <rect x="338" y="51" width="80" height="70" rx="8"/><rect x="420" y="51" width="80" height="70" rx="8"/><rect x="502" y="51" width="80" height="70" rx="8"/>
+          </g>
+          <g font-size="30" font-weight="700" fill="#344b82" text-anchor="middle">
+            <text x="50" y="96">0</text><text x="132" y="96">1</text><text x="214" y="96">4</text>
+            <text x="296" y="96">3</text><text x="378" y="96">7</text><text x="460" y="96">2</text><text x="542" y="96">0</text>
+          </g>
+          <text x="300" y="139" font-size="11" fill="#7785a3" text-anchor="middle">Кома відокремлює цілу частину від дробової</text>
+          <path d="M255 46v82" stroke="#f08b54" stroke-width="3" stroke-dasharray="4 4"/>
+        </svg>
+        <p class="tip-line">Наприклад, у числі <strong>14,372</strong>: 1 — десятки, 4 — одиниці, 3 — десяті, 7 — соті, 2 — тисячні.</p>
+      </article>
+
+      <article class="panel lesson-card">
+        <div class="section-heading"><span class="number">2</span><h3>Правило округлення</h3></div>
+        <p class="muted">Дивимося на цифру, яка стоїть одразу праворуч від потрібного розряду.</p>
+        <svg class="wide-svg" viewBox="0 0 520 150" role="img" aria-label="Цифри від нуля до чотирьох не змінюють розряд, від п'яти до дев'яти збільшують на один">
+          <rect x="8" y="8" width="242" height="132" rx="14" fill="#eaf7f0"/>
+          <rect x="270" y="8" width="242" height="132" rx="14" fill="#fff1e9"/>
+          <text x="129" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#23734d">0 · 1 · 2 · 3 · 4</text>
+          <text x="391" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#a84e28">5 · 6 · 7 · 8 · 9</text>
+          <g font-size="38" font-weight="800" text-anchor="middle">
+            <text x="129" y="83" fill="#23734d">↓</text><text x="391" y="83" fill="#a84e28">↑</text>
+          </g>
+          <g font-size="13" text-anchor="middle" fill="#41516d">
+            <text x="129" y="111">Залишаємо без змін</text><text x="391" y="111">Збільшуємо на 1</text>
+          </g>
+        </svg>
+        <p class="tip-line">Запам'ятай: <strong>0–4 — не додаємо</strong>, <strong>5–9 — додаємо 1</strong> до цифри потрібного розряду.</p>
+      </article>
+
+      <article class="panel lesson-card boundary-card">
+        <div class="section-heading"><span class="number">3</span><h3>Уявна межа округлення</h3></div>
+        <p class="muted">Межа показує, які цифри залишаємо, а які перевіряємо або відкидаємо.</p>
+        <svg class="wide-svg" viewBox="0 0 520 135" role="img" aria-label="Приклад числа 8,473 з межею після цифри 4">
+          <rect x="22" y="20" width="476" height="82" rx="12" fill="#f7f9ff" stroke="#dce4f6"/>
+          <g font-size="34" font-weight="700" text-anchor="middle" fill="#344b82">
+            <text x="112" y="72">8</text><text x="157" y="72">,</text><text x="202" y="72">4</text><text x="292" y="72">7</text><text x="337" y="72">3</text>
+          </g>
+          <path d="M246 30v62" stroke="#f08b54" stroke-width="4" stroke-linecap="round"/>
+          <path d="M246 17l-7 9h14z" fill="#f08b54"/>
+          <g font-size="12" font-weight="700" text-anchor="middle">
+            <text x="157" y="119" fill="#23734d">залишаємо</text><text x="337" y="119" fill="#a84e28">перевіряємо</text>
+          </g>
+        </svg>
+        <p class="tip-line">Округлюємо 8,473 до десятих: залишаємо 8,4, дивимося на 7 — отже, отримуємо 8,5.</p>
+      </article>
+    </section>
+
+    <section class="practice panel" id="practice">
+      <div class="practice-head">
+        <div><p class="eyebrow">Твоя черга спробувати</p><h2>Тренажер</h2></div>
+        <button class="primary-btn" id="newTaskBtn">↻ Нове завдання</button>
+      </div>
+      <div class="task-prompt" id="taskPrompt">Округли число…</div>
+      <p class="muted center">Натисни між цифрами, щоб поставити уявну межу. Її можна пересунути.</p>
+      <div class="number-stage">
+        <div class="number-line" id="numberLine" aria-label="Цифри числа"></div>
+        <div class="boundary-caption" id="boundaryCaption">Межу ще не встановлено</div>
+      </div>
+      <div class="answer-area">
+        <h3>Обери правильну відповідь</h3>
+        <div class="answers" id="answers">
+          <button class="answer-btn" disabled>Варіант 1</button>
+          <button class="answer-btn" disabled>Варіант 2</button>
+        </div>
+        <div class="feedback" id="feedback" aria-live="polite">Спочатку уважно прочитай завдання.</div>
+      </div>
+      <div class="action-row">
+        <button class="secondary-btn" id="hintBtn">💡 Підказка</button>
+        <span class="hint-text" id="hintText" hidden></span>
+      </div>
+    </section>
+
+    <section class="explanation panel" id="explanation" aria-live="polite">
+      <div class="section-heading"><span class="number">✓</span><h2>Розберімо крок за кроком</h2></div>
+      <p class="muted" id="explanationText">Після вибору відповіді тут з'явиться пояснення: який розряд округлюємо, на яку цифру дивимося та як отримуємо результат.</p>
+    </section>
+  </main>
+  <footer><span>Математика — це зрозуміло!</span><span>Тренуйся у власному темпі ✨</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
